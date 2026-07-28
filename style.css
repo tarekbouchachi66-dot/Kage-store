@@ -1,45 +1,800 @@
-body {
+/* =========================
+   KAGE - Premium Apparel
+   Homepage CSS Part 1
+========================= */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
+
+body {
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
 
 header {
+    width: 100%;
+    height: 90px;
+    padding: 0 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: black;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5,5,5,0.85);
+    backdrop-filter: blur(10px);
 }
+
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin-left: 20px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: 0.3s;
 }
+
+
+nav a:hover {
+    color: #aaa;
+}
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+
+.hero {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    position: relative;
+
+}
+
+
+.hero::before {
+
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.9)
+    );
+
+    z-index:-1;
+
+}
+
+
+
+.hero-content {
+
+    max-width:900px;
+    text-align:center;
+
+}
+
+
+.hero h2 {
+
+    font-size:75px;
+    letter-spacing:8px;
+    line-height:1.1;
+    font-weight:900;
+
+}
+
+
+
+.hero p {
+
+    margin-top:25px;
+    font-size:20px;
+    color:#cfcfcf;
+    letter-spacing:2px;
+
+}
+
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+.btn {
+
+    display:inline-block;
+    margin-top:40px;
+    padding:16px 45px;
+
+    background:white;
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:bold;
+    letter-spacing:3px;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover {
+
+    background:#111;
+    color:white;
+    border:1px solid white;
+
+}
+
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
 
 section {
-    text-align: center;
-    padding: 80px 20px;
+
+    padding:100px 8%;
+
 }
 
-button {
-    background: #c1121f;
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
+
+
+.section-title {
+
+    text-align:center;
+    font-size:45px;
+    letter-spacing:5px;
+    margin-bottom:60px;
+
 }
 
-button:hover {
-    background: #ff3040;
+
+
+/* =========================
+   COLLECTION INTRO
+========================= */
+
+
+.collection {
+
+    text-align:center;
+
 }
+
+
+.collection p {
+
+    max-width:700px;
+    margin:auto;
+
+    color:#aaa;
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+
+.container {
+
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+
+}
+
+
+
+.flex {
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+
+/* =========================
+   IMAGE EFFECTS
+========================= */
+
+
+img {
+
+    max-width:100%;
+    display:block;
+
+}
+
+
+.image-hover {
+
+    overflow:hidden;
+
+}
+
+
+.image-hover img {
+
+    transition:.6s;
+
+}
+
+
+.image-hover:hover img {
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* =========================
+   DARK PREMIUM STYLE
+========================= */
+
+
+.dark-box {
+
+    background:#0d0d0d;
+    padding:40px;
+    border-radius:5px;
+
+}
+
+
+.line {
+
+    width:80px;
+    height:2px;
+    background:white;
+    margin:20px auto;
+
+}
+
+
+
+/* =========================
+   SCROLL EFFECT PREP
+========================= */
+
+
+.fade {
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+
+}
+
+
+.fade.show {
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+
+
+/* =========================
+   MOBILE MENU SPACE
+========================= */
+
+
+.menu-icon {
+
+    display:none;
+    font-size:30px;
+
+}
+
+
+
+/* =========================
+   HERO BACKGROUND IMAGE
+========================= */
+
+
+.hero {
+
+background-image:
+url("images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+}/* =========================
+   PRODUCT CARDS
+========================= */
+
+.products {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+}
+
+
+.product-card {
+
+    background:#0d0d0d;
+    padding:20px;
+
+    transition:.4s;
+    border:1px solid #151515;
+
+}
+
+
+.product-card:hover {
+
+    transform:translateY(-10px);
+    border-color:white;
+
+}
+
+
+.product-card img {
+
+    width:100%;
+    height:420px;
+    object-fit:cover;
+
+}
+
+
+
+.product-card h3 {
+
+    margin-top:25px;
+    font-size:22px;
+    letter-spacing:2px;
+
+}
+
+
+
+.product-card p {
+
+    margin-top:10px;
+    color:#aaa;
+
+}
+
+
+
+.price {
+
+    margin-top:15px;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+
+
+/* =========================
+   CATEGORY CARDS
+========================= */
+
+
+.categories {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+
+
+.category {
+
+    height:350px;
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+
+.category img {
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+
+}
+
+
+
+.category:hover img {
+
+    transform:scale(1.1);
+
+}
+
+
+
+.category h3 {
+
+    position:absolute;
+    bottom:25px;
+    left:25px;
+
+    font-size:30px;
+    letter-spacing:3px;
+
+}
+
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+
+.about {
+
+    display:flex;
+    gap:60px;
+    align-items:center;
+
+}
+
+
+
+.about-text {
+
+    flex:1;
+
+}
+
+
+
+.about-text h2 {
+
+    font-size:45px;
+    letter-spacing:5px;
+
+}
+
+
+
+.about-text p {
+
+    color:#aaa;
+    margin-top:25px;
+    line-height:1.8;
+    font-size:18px;
+
+}
+
+
+
+.about-image {
+
+    flex:1;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
 
 footer {
-    text-align: center;
-    padding: 30px;
-    background: black;
+
+    background:#000;
+    padding:60px 8%;
+    text-align:center;
+
+}
+
+
+
+footer h2 {
+
+    font-size:35px;
+    letter-spacing:6px;
+
+}
+
+
+
+footer p {
+
+    color:#777;
+    margin-top:20px;
+
+}
+
+
+
+.socials {
+
+    margin-top:30px;
+
+}
+
+
+
+.socials a {
+
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    letter-spacing:2px;
+
+}
+
+
+
+.socials a:hover {
+
+    color:#aaa;
+
+}
+
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+
+.newsletter {
+
+    margin-top:40px;
+
+}
+
+
+
+.newsletter input {
+
+    padding:15px;
+    width:300px;
+
+    background:#111;
+    border:1px solid #333;
+
+    color:white;
+
+}
+
+
+
+.newsletter button {
+
+    padding:15px 30px;
+
+    background:white;
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+.hero-content {
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+header {
+
+    padding:0 5%;
+
+}
+
+
+header h1 {
+
+    font-size:25px;
+
+}
+
+
+nav {
+
+    display:none;
+
+}
+
+
+
+.menu-icon {
+
+    display:block;
+
+}
+
+
+
+.hero h2 {
+
+    font-size:45px;
+    letter-spacing:4px;
+
+}
+
+
+
+.hero p {
+
+    font-size:16px;
+
+}
+
+
+
+.products {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.categories {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.about {
+
+    flex-direction:column;
+
+}
+
+
+
+.about-text h2 {
+
+    font-size:35px;
+
+}
+
+
+
+.product-card img {
+
+    height:350px;
+
+}
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+.hero h2 {
+
+    font-size:35px;
+
+}
+
+
+.section-title {
+
+    font-size:32px;
+
+}
+
+
+.btn {
+
+    padding:14px 30px;
+
+}
+
+
+.newsletter input {
+
+    width:100%;
+
+}
+
+
+.newsletter button {
+
+    width:100%;
+    margin-top:10px;
+
+}
+
+
 }
