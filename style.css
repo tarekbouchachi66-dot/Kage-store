@@ -815,3 +815,88 @@ nav {
     background: #b30000;
     color: white;
 }
+/* PRODUCT BADGE */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #b30000;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.product-card img {
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+   /* PREMIUM PRODUCT CARDS */
+
+.product-card {
+    background: #111;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #222;
+    padding-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(179, 0, 0, 0.35);
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+}
+
+.product-card h3 {
+    color: white;
+    margin: 20px 0 10px;
+    font-size: 22px;
+}
+
+.product-card p {
+    color: #b30000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #b30000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background: #ff1a1a;
+}
+   /* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
