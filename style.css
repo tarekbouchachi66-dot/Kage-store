@@ -789,4 +789,29 @@ nav {
 
 }
 
- 
+ /* SHOP FILTERS */
+
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid #b30000;
+    padding: 12px 28px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #b30000;
+    color: white;
+}
