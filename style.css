@@ -41,11 +41,19 @@ header h1 {
     letter-spacing: 5px;
     font-weight: 900;
 }
-logo img{
-    height:60px;
-    width:auto;
-    display:block;
+.logo{
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items:center;
 }
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
 
 nav {
     display: flex;
@@ -333,18 +341,7 @@ img {
 
 
 
-/* =========================
-   HERO BACKGROUND IMAGE
-========================= */
 
-
-.hero {
-
-background-image:
-url("images/hero.jpg");
-
-background-size:cover;
-background-position:center;
 
 }/* =========================
    PRODUCT CARDS
@@ -759,8 +756,7 @@ nav {
 
 @media(max-width:500px){
 
-
-.hero h1 {
+.hero h1{
     font-size:35px;
 }
 
@@ -793,18 +789,4 @@ nav {
 
 }
 
-.logo {
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
+ 
